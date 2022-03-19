@@ -4,7 +4,7 @@ fun main() {
     // if-else
     val a = 1
     val b = 2
-    val result = if (a > b) {
+    val result = if (a > b) { // assign the result of the "if-else" to a variable
         a
     } else {
         b

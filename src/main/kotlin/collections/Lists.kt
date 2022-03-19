@@ -1,5 +1,9 @@
 package collections
 
+/**
+ * Kotlin has a wider functionality in working with lists
+ */
+
 fun main() {
     // creation
 
@@ -20,6 +24,15 @@ fun main() {
     val filteredElements = mutableList.filter { it % 2 != 0 }
     println(filteredElements) // [1, 3]
 
+    println(mutableList.drop(2)) // [3]
+    println(mutableList.dropWhile {
+        it < 3
+    }) // [3]
+    println(mutableList.dropLast(2)) // [1]
+    println(mutableList.dropLastWhile {
+        it >= 3
+    }) // [1, 2]
+
     println(mutableList.take(2)) // [1, 2]
     println(mutableList.takeWhile { it < 3 }) // [1, 2]
     println(mutableList.takeLast(2)) // [2, 3]
@@ -29,7 +42,7 @@ fun main() {
     println(mutableList.minOrNull()) // 1
     println(listOf(Car("Ford", 200, "s"), Car("Ferrari", 300, "a"))
         .maxByOrNull { it.maxSpeed }) // Car(model=Ferrari, maxSpeed=300)
-    println(listOf(
+    println(listOf( // you can set condition of filtration
         Car("Ford", 200, "s"),
         Car("Ferrari", 300, "a"),
         Car("Koenigsegg", 400, "s"))
@@ -73,7 +86,7 @@ fun main() {
     println(listOf(3, 2, 1).sorted()) // only immutable lists [1, 2, 3]
     println(listOf(1, 2, 3).sortedDescending()) // only immutable lists [3, 2, 1]
     println(mutableListOf(1, 2, 3).shuffle()) // mixes mutable list [1, 3, 2]
-    println(listOf(1, 2, 3).shuffled()) // mixes mutable list [1, 3, 2]
+    println(listOf(1, 2, 3).shuffled()) // mixes immutable list [1, 3, 2]
     println(listOf(1, 2, 3).average()) // 2.0
 
 
@@ -82,6 +95,8 @@ fun main() {
     println(listOf(1, 2, 3).plus(4)) // returns a new list [1, 2, 3, 4]
     println(listOf(1, 2, 3).minus(3)) // returns a new list [1, 2]
 
+    val exList = listOf(3, 1, 2, 3) // only the first element is deleted
+    println(exList.minus(3)) // [1, 2, 3]
 
     // zip
     println(listOf("uno", "dos", "tres").zip(listOf(1, 2, 3, 4))) // [(uno, 1), (dos, 2), (tres, 3)]

@@ -12,4 +12,16 @@ class BackingField {
     var tempVar: String = "String"
         set (value) {field = value}
         get () {return field}
+
+    // we cannot write like this because 'ex1 = value' calls a setter,
+    // so here we call a setter inside another setter, that is why
+    // there is 'backing field'
+    var ex1: String
+        get() = ex1
+        set(value) {ex1 = value}
+
+    // that is the correct code
+    var ex2: String = "Bob"
+        get() = field
+        set(value) {ex2 = field}
 }
