@@ -1,0 +1,17 @@
+https://www.youtube.com/watch?v=wXLItrqEBJ4
+
+How does Kotlin works in Android?
+- like Java, its code is compiled into bytecode and is executed by the JVM.
+compiled Kotlin bytecode is 'Main.class' and the JVM executes it
+
+What is 'Null safety' and 'Nullable types'? What is the 'Elvis operator'?
+- Kotlin tries to prevent NPE by using nullable types like 'String?', 'Int?'
+etc. These act as a wrapper type and can hold null values. To retrieve the
+basic type we use safe calls that unwrap these nullable types.
+
+We use Elvis operator to safety unwrap the value from a nullable type(?:).
+The value on the right will be used if the nullable type is null
+
+How many types of constructors are used on Kotlin?
+- two: primary constructor - header of the class is declared after a class name
+       secondary constructor - allows putting additional logic declared in the body of a class
