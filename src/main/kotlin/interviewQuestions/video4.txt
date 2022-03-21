@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=MUKbrpS7zUU
+
+Define a variable which holds function
+- val fn: (Int, Int) -> Unit = fun(a: Int, b: Int) { println(a + b) }
+  val lambda: (Int, Int) -> Int = {int1, int2 -> int1 + int2}
+
+Declare a function that takes another function as a parameter
+-   fun main {
+        println( highOrderFunction(5, 5) { a, b -> a * b } )
+    }
+    fun highOrderFunction(a: Int, b: Int, operation: (Int, Int) -> Int) =
+        operation(a, b)

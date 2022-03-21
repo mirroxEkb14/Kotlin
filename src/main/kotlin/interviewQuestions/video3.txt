@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=LxCGmJGnJrA
+
+Can you explain 'String' in Kotlin?
+- 'String' class represents a sequence of characters. All strings are
+implemented as instance of the 'String' class
+
+What is 'Safe call' operator?
+- it allows to combine a null-check and method call(?.), if this value is not
+null, the method call is executed normally, if it is null, the method call
+is skipped and null is used as a value
+
+How do you think extension functions are useful?
+- extension functions help to extend a class with the functionality
+without having to inherit from the class
+
+How do you realize Ternary Conditional Operator in Kotlin (a ? b : c)?
+- if (condition) a else b
+
+What are the few features that Kotlin provides but not Java?
+- Null-safety: a variable cannot be null. We have to add "?" to make the variable null
+  Data classes
+  Extension functions
+  smart casts
+  singletons
+  range expressions
+
+What are the features of Java that Kotlin does not have?
+- primitive data types
+  checked exceptions
+  static members
+  wildcard-types

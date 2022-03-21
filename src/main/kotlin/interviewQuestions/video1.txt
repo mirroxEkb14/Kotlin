@@ -15,3 +15,67 @@ The value on the right will be used if the nullable type is null
 How many types of constructors are used on Kotlin?
 - two: primary constructor - header of the class is declared after a class name
        secondary constructor - allows putting additional logic declared in the body of a class
+
+What are the types of Strings available in Kotlin?
+- two: escaped strings - contain escaped characters (\n, \t, \b)
+       raw strings - placed inside triple quotes and do not have escaped characters,
+                     it allows writing into multiple lines, and it can contain special
+                     characters without the need for escaping them: val path = """C:\Repository\read.me"""
+
+What is the use of @JvmStatic, @JvmOverloads, @JvmFields?
+- @JvmStatic is used to create one additional static method for announced function(in bytecode).
+It uses for better Java interoperability(to integrate with some Java frameworks as a JUnit)
+  @JvmOverloads is used when we have a method in Kotlin with default values(it is a method overloading in Java)
+    or some class with default values(it is needed to create more constructors in Java) and we want to use it
+    in Java, it will not compile(Java needs an instance of a class), but with this annotation in bytecode
+    JVM will create these multiple overloads
+  @JvmField uses compiler not to create getters/setters for a value so that we call a value from Java code
+    not with 'person.getName()' but 'person.name'. It is when we write a class in Kotlin where we access
+    the class values through 'person.name', using this kotlin class in Java in uses getters/setters by default
+
+What is the use of abstraction if Kotlin?
+- it is the most important concept of OOP. It is used when you are aware of functionalities of a class but
+do not know how the functionality should be implemented. So we use abstract methods(are not implemented)
+that must be overridden in a child class(have an implementation for this class)
+
+What are the structural expressions in Kotlin?
+- return - returns from a function(the function is finished, can return a value)
+  break - the expression terminates the closest enclosing loop
+  continue - proceed for the next loop
+
+What is meant by data classes in Kotlin?
+- when we create a class, we need to setting variables, getters/setters, 'toString()', 'copy()',
+'hash()' methods, but this keyword creates all this automatically
+
+What type of programming styles does Kotlin support?
+- all the: Procedural - top-level functions can be used outside a class and write code
+                        strictly procedural
+           Functional - Kotlin has lambdas
+           Object-oriented - classes
+
+Explain functions in Kotlin?
+- it is first-class functions that can be stored in a variable and data structures and can be passed
+as arguments and returned from other higher-order functions
+
+What do you mean by destructing in Kotlin?
+- it is an extracting multiple values from data stored objects and arrays,
+example: val (name, age) = Programmer
+         println(name)
+         println(age)
+
+When to use 'lateinit' keyword in Kotlin?
+- it is late initialization, in Kotlin normally variables are non-null, but sometimes we need to put
+a value later but this variable must already be declared, it is used when you are sure that this
+variable will be initialized before using
+
+What is the difference between List and array types?
+- arrays have a fixed size when lists can change their suze dynamically,
+  list is an interface that has several implementations(ArrayList, LinkedList) while array is a class(Java array)
+
+Difference between 'lateinit' and 'by lazy' in Kotlin?
+- 'lateinit' when we want a property to be initialized from outside in a way unknown declaring it,
+   applied only to 'var'
+  'by lazy' used only for 'val', can be initialized once
+
+What are 'companion objects' in Kotlin?
+- when we need to write a function or variable that can be called without having an instance of the class

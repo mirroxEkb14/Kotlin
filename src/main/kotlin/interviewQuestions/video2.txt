@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=jIAVWrgix8M
+
+What is Kotlin?
+- it is an open source programming language that has object-oriented
+programming features. It has Extensions, Data classes, Companion Objects
+
+Why is Kotlin preferred over Java?
+- the syntax is simpler, we need to write less code, has features that
+Java does not have as Null-safety, Extension functions, Range expressions(..)
+
+Can you execute Kotlin code without JVM?
+- JVM compiles a code into native code, which can be done without JVM, too
+
+What are the modifiers that are available in Kotlin?
+-  are used to restrict the accessibility of classes, objects, variables etc.
+public - visible everywhere
+private - visible inside the same class only
+internal - visible in the same module
+protected - visible inside the same class and its subclasses
+
+List the basic data types in Kotlin?
+- they define how much space the variable will take
+ex.: String, Boolean, Arrays, Characters, Numbers
+
